@@ -8,6 +8,7 @@ USAGE:
 - repository.js
 
 ```javascript
+
   'use strict';
 
   const httpError = require('./http-restify-error');
@@ -17,11 +18,13 @@ USAGE:
   }
 
   module.exports = find;
+
 ```
 
 - handler.js
 
 ```javascript
+
   'use strict';
 
   const httpError = require('./http-restify-error');
@@ -44,6 +47,7 @@ USAGE:
 - index.js
 
 ```javascript
+
   'use strict';
 
   const restify = require('restify');
