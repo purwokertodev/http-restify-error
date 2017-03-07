@@ -11,7 +11,7 @@ USAGE:
 
   'use strict'
 
-  const httpError = require('./http-restify-error');
+  const httpError = require('http-restify-error');
 
   function find(id, cb){
     cb({error: httpError.ERROR_TYPE.NOT_FOUND, msg: `user with id ${id} not found`}, null);
@@ -27,7 +27,7 @@ USAGE:
 
   'use strict';
 
-  const httpError = require('./http-restify-error');
+  const httpError = require('http-restify-error');
 
   const find = require('./repository');
 
