@@ -1,7 +1,7 @@
 - SIMPLE HTTP ERROR CUSTOM FOR RESTIFY
 
 When you dealing with callback, sometime you confuse which error you need to handle.
-Because you don't know errors come from.
+Because you don't know where the error comes from.
 
 USAGE:
 
@@ -32,10 +32,10 @@ USAGE:
   const find = require('./repository');
 
   function getExample(req, res, next){
-  let id = 1;
-  find(id, (err, data) => {
-    res.send(httpError.error(err.error, err.msg));
-  });
+    let id = 1;
+    find(id, (err, data) => {
+      res.send(httpError.error(err.error, err.msg));
+    });
   }
 
   module.exports = {
@@ -68,3 +68,4 @@ USAGE:
   server.listen(3000);
 
 ```
+ This package build from https://github.com/restify/errors
