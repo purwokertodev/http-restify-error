@@ -7,7 +7,7 @@ USAGE:
 
 - repository.js
 
-```javascript
+```
 
   'use strict';
 
@@ -23,7 +23,7 @@ USAGE:
 
 - handler.js
 
-```javascript
+```
 
   'use strict';
 
@@ -46,7 +46,7 @@ USAGE:
 
 - index.js
 
-```javascript
+```
 
   'use strict';
 
