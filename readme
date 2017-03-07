@@ -9,8 +9,6 @@ USAGE:
 
 ```javascript
 
-  'use strict';
-
   const httpError = require('./http-restify-error');
 
   function find(id, cb){
