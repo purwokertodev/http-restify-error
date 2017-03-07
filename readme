@@ -1,0 +1,4 @@
+SIMPLE HTTP ERROR CUSTOM FOR RESTIFY
+
+When you dealing with callback, sometime you confuse which error you need to handle.
+Because you don't know errors come from.

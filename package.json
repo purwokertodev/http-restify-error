@@ -1,0 +1,22 @@
+{
+  "name": "http-restify-error",
+  "version": "1.0.0",
+  "description": "custom http error for restify package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuriyanto48/http-restify-error.git"
+  },
+  "author": "wuriyanto <wuriyanto48@yahoo.co.id>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuriyanto48/http-restify-error/issues"
+  },
+  "homepage": "https://github.com/wuriyanto48/http-restify-error#readme",
+  "dependencies": {
+    "restify-errors": "^4.3.0"
+  }
+}
