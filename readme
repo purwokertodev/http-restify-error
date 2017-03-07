@@ -1,70 +1,70 @@
-SIMPLE HTTP ERROR CUSTOM FOR RESTIFY
+- SIMPLE HTTP ERROR CUSTOM FOR RESTIFY
 
 When you dealing with callback, sometime you confuse which error you need to handle.
 Because you don't know errors come from.
 
 USAGE:
 
-- repository.js
+-repository.js
 
 ```javascript
 
-'use strict';
+  'use strict';
 
-const httpError = require('./http-restify-error');
+  const httpError = require('./http-restify-error');
 
-function find(id, cb){
-cb({error: httpError.ERROR_TYPE.NOT_FOUND, msg: `user with id ${id} not found`}, null);
-}
+  function find(id, cb){
+    cb({error: httpError.ERROR_TYPE.NOT_FOUND, msg: `user with id ${id} not found`}, null);
+  }
 
-module.exports = find;
+  module.exports = find;
 
 ```
 
-- handler.js
+-handler.js
 
 ```javascript
 
-'use strict';
+  'use strict';
 
-const httpError = require('./http-restify-error');
+  const httpError = require('./http-restify-error');
 
-const find = require('./repository');
+  const find = require('./repository');
 
-function getExample(req, res, next){
-let id = 1;
-find(id, (err, data) => {
-res.send(httpError.error(err.error, err.msg));
-});
-}
+  function getExample(req, res, next){
+  let id = 1;
+  find(id, (err, data) => {
+    res.send(httpError.error(err.error, err.msg));
+  });
+  }
 
-module.exports = {
-getExample: getExample
-};
+  module.exports = {
+    getExample: getExample
+  };
 
 ```
 
-- index.js
+-index.js
 
 ```javascript
 
-'use strict';
+  'use strict';
 
-const restify = require('restify');
+  const restify = require('restify');
 
-const handler = require('./handler');
+  const handler = require('./handler');
 
-const server = restify.createServer({
-versions: "0.0.1",
-name: 'MyApp',
-});
+  const server = restify.createServer({
+    versions: "0.0.1",
+    name: 'MyApp',
+  });
 
-server.get('/', (req, res, next) => {
-res.send("Test........");
-});
+  server.get('/', (req, res, next) => {
+    res.send("Test........");
+  });
 
-server.get('/error-test', handler.getExample);
+  server.get('/error-test', handler.getExample);
 
-server.listen(3000);
+  server.listen(3000);
 
 ```
